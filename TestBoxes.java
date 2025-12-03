@@ -11,7 +11,8 @@ public class TestBoxes {
     public void testBoxAdd(){
 
         Box b = new Box();
-        b.add(truc:"truc1");
-        b.add(truc:"truc2");
+        b.add("truc1");
+        b.add("truc2");
     }
 }
+g

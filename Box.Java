@@ -3,14 +3,17 @@ import java.util.ArrayList;
 
 public class Box{
 
-    ArrayList<string> contents = new ArrayList<string>();
+    ArrayList<String> contents = new ArrayList<>();
 
     Box(){
 
-        systeme.out.println(x:"Box crée");
+        System.out.println("Box crée");
     }
 
-    public void add (string truc ){
+    public void add (String truc ){
         contents.add(truc);
     }
+
+  
+        
 }
