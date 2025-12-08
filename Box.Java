@@ -3,17 +3,24 @@ import java.util.ArrayList;
 
 public class Box{
 
-    ArrayList<String> contents = new ArrayList<>();
+    ArrayList<Thing> contents = new ArrayList<>();
 
     Box(){
 
         System.out.println("Box crée");
     }
 
-    public void add (String truc ){
+    public void add (Thing truc ){
         contents.add(truc);
     }
 
+    public boolean contains(Thing t){
+
+        return this.contents.contains(t);
+
+
+
+    }
   
         
 }
