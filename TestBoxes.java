@@ -7,6 +7,21 @@ public class TestBoxes {
     public void testBoxCreate() {
         Box b = new Box();
     }
+
+    @Test
+    public void testBoxCreateClosed() {
+        Box b = new Box();
+        // une boite doit etre fermée par défaut
+        assertFalse(b.isOpen());
+    }
+
+    @Test
+    public void testThingVolume() {
+        Thing truc = new Thing("truc",5);
+        assertEquals(5,truc.getVolume());
+
+    }
+
     @Test
     public void testBoxAdd(){
 
@@ -23,6 +38,7 @@ public class TestBoxes {
         Thing truc1 = new Thing("truc1");
         Thing truc2 = new Thing("truc2");
         Thing truc3 = new Thing("truc3");
+        b.open();
         b.add(truc1);
         b.add(truc2);
         assertTrue(b.contains(truc1));
@@ -38,8 +54,10 @@ public class TestBoxes {
         Thing truc1 = new Thing("truc1");
         Thing truc2 = new Thing("truc2");
         Thing truc3 = new Thing("truc3");
+        b.open();
         b.add(truc1);
         b.add(truc2);
+        
         assertTrue(b.contains(truc1));
         // doit contenir un truc 1
         assertTrue(b.contains(truc2));
@@ -55,7 +73,7 @@ public class TestBoxes {
         Box b = new Box();
         Thing truc1 = new Thing("truc1");
         Thing truc2 = new Thing("truc2");
-       
+        b.open();
         b.add(truc1);
 
         assertTrue(b.contains(truc1));
@@ -65,6 +83,10 @@ public class TestBoxes {
     
         // ne odoit ps contenir truc3
     }
+
+
+
+
  
 }
 

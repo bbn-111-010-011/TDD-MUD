@@ -4,14 +4,19 @@ import java.util.ArrayList;
 public class Box{
 
     ArrayList<Thing> contents = new ArrayList<>();
+    boolean open;
 
     Box(){
 
         System.out.println("Box crée");
+        open=false;
     }
 
     public void add (Thing truc ){
-        contents.add(truc);
+        if (this.isOpen())
+        {
+            contents.add(truc);
+        }
     }
 
     public boolean contains(Thing t){
@@ -36,6 +41,18 @@ public class Box{
 
 
     }
+
+    public boolean isOpen() {
+      return this.open;
+    }
+
+    public void open() {
+        this.open = true;
+      }
+
+      public void close() {
+        this.open = false;
+      }
 
 
   
