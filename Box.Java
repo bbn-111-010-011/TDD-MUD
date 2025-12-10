@@ -21,6 +21,23 @@ public class Box{
 
 
     }
+
+
+    public void  remove(Thing t) throws RuntimeException{
+
+        boolean ok = this.contents.remove(t);
+
+        if(!ok)
+            
+        {
+            throw new RuntimeException("remove echec ");
+
+        }
+
+
+    }
+
+
   
         
 }

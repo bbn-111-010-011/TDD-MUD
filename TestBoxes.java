@@ -44,8 +44,28 @@ public class TestBoxes {
         // doit contenir un truc 1
         assertTrue(b.contains(truc2));
         assertFalse(b.contains(truc3));
+        b.remove(truc2);
+        assertFalse(b.contains(truc2));
+        // ne odoit ps contenir truc3
+    }
+
+    @Test(expected = RuntimeException.class)
+    public void testBoxRemoveFails(){
+
+        Box b = new Box();
+        Thing truc1 = new Thing("truc1");
+        Thing truc2 = new Thing("truc2");
+       
+        b.add(truc1);
+
+        assertTrue(b.contains(truc1));
+        // doit contenir un truc 1
+        assertFalse(b.contains(truc2));
+        b.remove(truc2);
+    
         // ne odoit ps contenir truc3
     }
  
 }
 
+// 
